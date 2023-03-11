@@ -1,4 +1,4 @@
-package string.inprogress;
+package string;
 
 /**
  *You are given two strings word1 and word2. Merge the strings by adding letters in alternating order, starting with word1. If a string is longer than the other, append the additional letters onto the end of the merged string.
@@ -37,6 +37,8 @@ public class Q1768 {
     //word1:  a   b   c
     //word2:    p   q   r
     //merged: a p b q c r
+
+    //FALSE
     public static String mergeAlternately(String word1, String word2) {
         int max = Math.max(word1.length(), word2.length());
         String switchingWord = word1;
@@ -53,6 +55,20 @@ public class Q1768 {
             }
             stringBuilder.append(switchingWord.charAt(i));
         }
+        return stringBuilder.toString();
+    }
+
+
+    //TRUE
+    public static String mergeAlternately2(String word1, String word2) {
+        int min = Math.min(word1.length(), word2.length());
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i=0; i < min; i++){
+            stringBuilder.append(word1.charAt(i));
+            stringBuilder.append(word2.charAt(i));
+        }
+        String longWord = (word1.length() > word2.length()) ? word1 : word2;
+        stringBuilder.append(longWord.substring(min));
         return stringBuilder.toString();
     }
 }

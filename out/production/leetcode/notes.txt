@@ -1,0 +1,15 @@
+STATUSSES :
+    STATUS : TO BE CONTINUED
+    STATUS : NOT COMPLETED
+
+GIT CONFIG :
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://xxmehmetali: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@github.com/xxmehmetali/leetcode.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
