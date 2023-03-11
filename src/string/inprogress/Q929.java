@@ -10,7 +10,7 @@ public class Q929 {
      * emails = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
      * emails = ["a@leetcode.com","b@leetcode.com","c@leetcode.com"]
      */
-    public static int numUniqueEmails2(String[] emails) {
+    public static int numUniqueEmails(String[] emails) {
         Set<String> uniqueEmails = Arrays.stream(emails)
                 .map(email -> {
                     char localDivider = email.contains("+") ? '+' : '@';
@@ -22,15 +22,3 @@ public class Q929 {
         return uniqueEmails.size();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
